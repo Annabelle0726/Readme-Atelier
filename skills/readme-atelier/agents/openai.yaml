@@ -1,0 +1,4 @@
+interface:
+  display_name: "README Atelier"
+  short_description: "Project-native READMEs, visuals, and first-use guides"
+  default_prompt: "Use $readme-atelier to improve this project README, starting with repository evidence and 2–3 visual previews for me to choose from."
