@@ -35,6 +35,8 @@ Read [visual-directions](references/visual-directions.md). When no direction has
 
 Include a rendered preview, a short rationale, proposed media and tradeoffs for each. State any placeholder or conceptual material. Recommend one, then **wait for the user's choice**. Do not choose from silence or rewrite the full README during this pause. If the user explicitly delegates the choice, choose and explain it; an already approved direction needs no new approval.
 
+For a full visual redesign, plan the whole reading sequence, not only the cover. Preview at least one important body module with the first screen. When the user requests attractive, illustrated or interactive content, include body visuals, motion and supported interactions in the deliverable plan. Read [page-story-and-rendering](references/page-story-and-rendering.md) to choose the media, rendering mechanism and platform fallbacks. A selected cover establishes the visual direction; continue into body sketches without restarting style selection.
+
 If rendering is unavailable, explain the limitation and ask to use text-only concepts; do not call a written style list a visual preview.
 
 ## 3. Produce the selected visual system
@@ -45,9 +47,15 @@ Design one recognizable first screen or cover from the chosen direction. Choose 
 
 Keep exact copy in editable layout sources and essential explanations in Markdown. Generated artwork may communicate identity; real outputs prove capabilities. Keep supporting modules consistent with this project's selected direction.
 
+Give each body visual an explanatory job: show an actual result, compare alternatives, explain a process or clarify the deliverables. Let the content determine the number and medium. A full visual treatment requested by the user is incomplete if all meaningful design is confined to the cover. Do not turn every heading into decorative artwork or substitute audit output for evidence of a visual product's value.
+
+When asked for practical cases, lead with inspectable project artifacts. Identify the real project, its communication problem, the relevant design decisions, and the resulting README or media. Link to the source and show readable details beyond a cover thumbnail. Distinguish existing work, work produced in this run, and proposed redesigns; never imply the skill created earlier work without evidence. Before/after pairs require a genuine earlier version of the same project, not a deliberately weakened mockup.
+
 Place a small, accurate stack icon row with text labels below the cover in full README work. Derive every icon from verified runtime, language, framework or platform usage; do not pile up transitive dependencies, aspirational tools or decorative status badges.
 
 If meaningful operation or result changes require motion, capture the real process, produce a compact GIF and provide a clearly linked static PNG/SVG fallback. Do not animate decoration merely to satisfy a checklist.
+
+A workflow can also use a clearly labeled explanatory animation built from verified stages and artifacts. Distinguish this from a recording and label proposed results as drafts. Define what the viewer learns from each state change. Browser previews should support pause, replay, timeline seeking, keyboard operation and reduced motion. Exported GIFs are playback assets, not interactive controls.
 
 Default repository assets to assets/readme/ unless existing conventions or the user specify another path. Keep useful editable sources. In asset-only mode, provide an embed snippet separately and verify that README bytes did not change.
 
@@ -56,6 +64,8 @@ Default repository assets to assets/readme/ unless existing conventions or the u
 For full README work, use the content guidance in [discovery-and-content](references/discovery-and-content.md). Lead with identity, a plain-language value statement and real proof; guide the reader to a minimum working example before advanced detail.
 
 Use short paragraphs, meaningful headings, restrained tables, clear spacing, bounded image widths and readable code blocks. Keep commands, key facts, limitations and links usable when images fail. Do not rasterize the README or put all important information inside pictures.
+
+When simplifying a visually rich README, preserve its established imagery unless removal or concealment is requested. Address crowding with image scale, spacing, reading order and concise copy before hiding core visuals. Distinguish a request to reduce color saturation from one to reduce layout density; clarify when the difference changes the treatment.
 
 Include system requirements, install/run commands, configuration, examples, known limitations, authorship, contribution and licensing only as applicable and supported. Verify commands using the repository's actual package manager, versions and entry points; report commands not executed.
 
@@ -72,6 +82,8 @@ python /path/to/readme-atelier/scripts/audit_readme.py /path/to/repository/READM
 The helper checks common local references and asset budgets; it is not a renderer, security scanner or proof of successful usage.
 
 Show previews, changed files and a diff appropriate to scope. Distinguish verified checks from blocked or untested ones. Incorporate feedback, repeat affected checks and hand off the approved work. A successful automated check does not imply user satisfaction or authorize external actions.
+
+Review the body with the cover out of view: it should retain visual identity, clear focal points, concrete evidence and an obvious first-use path. Test actual interactive behavior and export the planned media from editable sources; a screenshot alone does not validate animation or controls. For a draft request, deliver an operable local preview and representative exports without replacing the published README.
 
 ## Common mistakes
 

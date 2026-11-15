@@ -19,6 +19,10 @@ Inspect:
 - Every asset reference resolves with exact filename casing.
 - GIF first frame, action, settled hold, reset and loop remain comfortable.
 - The static fallback is linked and is the correct result/state.
+- Body visuals still explain the project and carry its identity when the cover is hidden.
+- Every proposed interaction has a working target; browser-only controls are clearly separated from GitHub-native details and links.
+- Pause, replay, scrubbing, keyboard controls and reduced motion behave as described; seeking to a timestamp reproduces the same frame.
+- Motion exports come from the same source as the approved preview and include an informative static fallback.
 
 Open the preview and visually inspect it. Producing screenshots without looking at them does not complete the check.
 

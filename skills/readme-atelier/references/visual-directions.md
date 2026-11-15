@@ -17,6 +17,7 @@ Keep product facts consistent across the options. A screenshot-led composition, 
 
 Each option includes:
 - A rendered first-screen sketch at a comparable size.
+- For full README work, a body module and a compact reading-order plan showing where proof, installation, explanation and deeper reference belong.
 - A short name tied to this project.
 - The idea and evidence it foregrounds.
 - Proposed production method: screenshot, SVG, generated art or composition.
@@ -33,6 +34,8 @@ Recommend one and wait for the user's selection. Record the chosen direction and
 Record palette roles, font approach, layout, motif, image treatment, density and media choice. Do not ask users to approve every implementation detail once the visual intent is clear.
 
 Use the selected system across cover, icons, screenshots, captions and optional section imagery. Do not add a decorative graphic to every heading.
+
+Continue an approved cover into the body through shared palette roles, lettering, composition and material treatment. Avoid repeating the cover as a miniature banner for every section. Preview a continuous body passage so the user can judge transitions, visual density and the relationship between diagrams and text.
 
 Make the cover recognizable without hiding the project. Test whether removing its name would leave a generic asset suitable for an unrelated repository; if so, use more project-specific material.
 

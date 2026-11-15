@@ -1,6 +1,6 @@
 # 安装与使用 README Atelier
 
-README Atelier 是一套供支持 Skills 的编程工具读取的指引，帮助你基于真实仓库内容设计 README、封面和使用说明。它包含 Markdown 指引、参考文件和一个 Python 检查脚本；不附带生图模型或独立的桌面应用。
+README Atelier 是一套供支持 Skills 的编程工具读取的指引，帮助你基于真实仓库内容设计 README、封面和使用说明。它包含 Markdown 指引、参考文件、Python 检查脚本和可选的素材渲染脚本；不附带生图模型或独立的桌面应用。
 
 ## 环境要求
 
@@ -90,6 +90,32 @@ python skills/readme-atelier/scripts/audit_readme.py "/path/to/project/README.md
 ```bash
 python -m unittest discover -s tests -v
 ```
+
+## 可选：渲染流程图与动效
+
+需要可播放的流程图时，可使用随技能提供的渲染器。HTML 场景负责视觉设计，渲染器按指定时间截图，GIF 合成器保留帧间时长。两者不会为项目自动套用固定模板。
+
+在仓库根目录安装可选依赖；仅阅读技能或运行 README 检查不需要这些依赖：
+
+```bash
+npm install --prefix .work/render-runtime playwright
+node .work/render-runtime/node_modules/playwright/cli.js install chromium
+python -m pip install Pillow
+```
+
+场景页面需要提供 `window.readmeAtelier.ready`、`duration` 和 `renderAt(seconds)`，以及默认的 `#scene` 元素。完整约定见 [正文叙事与渲染指南](../skills/readme-atelier/references/page-story-and-rendering.md)。
+
+将下面的 `scene.html` 换成实际场景文件；每次选择新的输出目录与 GIF 文件名，脚本不会覆盖已有文件：
+
+```bash
+node skills/readme-atelier/scripts/render_scene.mjs --input scene.html --out .work/frames-v1 --runtime .work/render-runtime --width 940 --height 540 --fps 12
+python skills/readme-atelier/scripts/assemble_gif.py .work/frames-v1 .work/workflow-v1.gif
+node skills/readme-atelier/scripts/render_scene.mjs --input scene.html --out .work/still-v1 --runtime .work/render-runtime --time 9.8
+```
+
+安装副本使用其 `scripts/` 下的相同脚本。浏览器预览中的暂停、时间轴等控件由场景页面实现；GitHub README 使用导出的 GIF、静态图、链接与原生折叠内容。GIF 本身没有这些播放控件，重要信息应同时保留为文字与静态图。
+
+维护渲染器时，安装上述依赖后可运行 `node tests/test_render_scene.mjs .work/render-runtime`，验证时间戳、静态图与序列帧的一致性、越界时间和防覆盖行为。GIF 合成检查已包含在 `python -m unittest discover -s tests -v` 中。
 
 ## 更新
 

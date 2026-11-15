@@ -1,0 +1,44 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          ".work/body-draft/index.html"
+        ],
+        "createdAt": "2026-11-15T11:03:34.896Z",
+        "reason": "user confirmed: selected README-Atelier-C-Hero with a cream background and explicitly requested the body draft continue the selected cover style."
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          ".work/case-studies/index.html"
+        ],
+        "createdAt": "2026-11-15T11:25:36.000Z",
+        "reason": "user confirmed: selected the cream, burgundy and gold README-Atelier-C-Hero direction and requested continuation of that style. This local case comparison page belongs to the same README Atelier preview; the embedded project READMEs retain their own presentation."
+      },
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          "assets/readme/source/workflow.html"
+        ],
+        "createdAt": "2026-11-15T11:47:40.760Z",
+        "reason": "Intentional miniature README and device specimens in an explanatory animation; primary explanatory text and player notes were enlarged to 14px or above. Small type represents scaled document content, not instructions."
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "assets/readme/source/workflow.html"
+        ],
+        "createdAt": "2026-11-15T11:51:55.464Z",
+        "reason": "user confirmed: selected README-Atelier-C-Hero and explicitly requested that body visuals and motion continue its cream paper, burgundy serif type, and fine gold rules. This workflow intentionally follows that approved palette."
+      }
+    ]
+  }
+}
