@@ -35,6 +35,8 @@
 
 本地 Markdown 预览是 GitHub 样式近似，最终展示以 GitHub 渲染为准。GitHub README 使用图片、GIF、链接和原生 `details`；图片中的构图示例不充当可点击的应用控件。
 
+正式 README 的桌面案例图已替换为三倍像素密度导出：Agency Bloom 为 3120 × 1758，Taste Studio 为 3120 × 1926。排版宽度仍为 1040 CSS 像素，使用原始配图重新渲染；手机专用排版保持不变。下方通用命令默认导出一倍像素密度；复现本次高清图时，使用渲染器副本，将浏览器的 `deviceScaleFactor` 从 `1` 设为 `3`，其余参数不变。
+
 ## 从源码重新渲染
 
 先按[可选渲染依赖](installation.md#可选渲染流程图与动效)准备 Playwright、Chromium 与 Pillow。在仓库根目录执行，输出目录和 GIF 文件使用新名称：
